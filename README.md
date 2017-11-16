@@ -18,7 +18,7 @@ $cutter = new CutterGen;
 // Set name
 $cutter->name('Smith');
 
-// Set cutter length, default i 2
+// Set cutter length, default is 2
 $cutter->length(3);
 
 // Generate cutter number, outputs S65
