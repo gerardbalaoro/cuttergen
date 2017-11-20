@@ -10,7 +10,7 @@ class CutterGen {
   	}
   
 	public function length($length = 2) {
-		$this->length = (int) $length < $this->length ? $this->length : (int) $length;
+		$this->length = (int) $length < 2 ? $this->length : (int) $length;
 		return $this->length;
  	}
 	
@@ -19,7 +19,7 @@ class CutterGen {
 		$length = (int) $length ?: $this->length;
 		
 		if ($name) {
-			return $this->get_initial($name).$this->get_second($name).$this->get_expansion($name);
+			return $this->get_initial($name).$this->get_second($name).$this->get_expansion($name, $length);
 		} else {
 			return false;
 		}	
