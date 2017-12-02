@@ -4,33 +4,34 @@ class CutterGen {
 	public $name = null;
 	public $length = 2;
 
-  	public function name($name = null) {
-		$this->name = preg_replace('/[^\p{L}\p{N}\s]/u', '', $name) ?: $this->name;
+	public function name($name = null) {
+		$name = preg_replace('/[^\p{L}\p{N}\s]/u', '', $name);
+		$name = str_replace(' ', '', $name);
+		$this->name = $name ?: $this->name;
 		return $this->name;
-  	}
+	  }
   
 	public function length($length = 2) {
-		$this->length = (int) $length < $this->length ? $this->length : (int) $length;
+		$this->length = (int) $length < 2 ? $this->length : (int) $length;
 		return $this->length;
  	}
 	
 	public function generate($name = null, $length = null) {
-		$name = preg_replace('/[^\p{L}\p{N}\s]/u', '', $name) ?: $this->name;
-		$length = (int) $length ?: $this->length;
-		
+		$name = $this->name($name);
+
 		if ($name) {
-			return $this->get_initial($name).$this->get_second($name).$this->get_expansion($name);
+			return $this->get_initial($name).$this->get_second($name).$this->get_expansion($name, $length);
 		} else {
 			return false;
 		}	
 	}
 
-	public function get_initial($name = null) {
+	protected function get_initial($name) {
 		$data = $this->initialize($name);
 		return strtoupper($data['first']);
 	}
 	
-	public function get_second($name = null) {
+	protected function get_second($name) {
 		$data = $this->initialize($name);
 		// If vowel
 		if (in_array($data['first'], ['a', 'e', 'i', 'o', 'u'])) {
@@ -111,7 +112,7 @@ class CutterGen {
 		}
 	}
 	
-	public function get_expansion($name = null, $length = 2) {
+	protected function get_expansion($name, $length = 2) {
 		$data = $this->initialize($name, $length);
 		$length = $this->length($length);
 		$expand = null;
@@ -133,15 +134,15 @@ class CutterGen {
 		return $expand;
 	}
 
-	private function initialize($name = null) {
-		$name = preg_replace('/[^\p{L}\p{N}\s]/u', '', $name) ?: $this->name;
+	protected function initialize($name) {
+		$name = $this->name($name);
 		$data['first'] = strtolower(substr($name, 0, 1));
 		$data['second'] = strtolower(substr($name, 1, 1));
 		$data['third'] = strtolower(substr($name, 2, 1));
 		return $data;
 	}
 	
-	private function expand($char) {
+	protected function expand($char) {
 		if (in_array($char, range('a', 'd'))) {
 			return '3';
 		} elseif (in_array($char, range('e', 'h'))) {
@@ -159,7 +160,7 @@ class CutterGen {
 		}
 	}
 	
-	private function toNumber($char) {
+	protected function toNumber($char) {
     	return $char ? ord(strtolower($char)) - 95 : 0;
 	}
 }
