@@ -1,46 +1,31 @@
 CutterGen
 -------------------------------------------
-Cutter Number Generator PHP Library
+Library of Congress Cutter Number Generation Library
 
 ### Usage
 
 * Initializing the library
 ```php
-require_once('src/CutterGen.php');
-$cutter = new CutterGen;
-```
-
-* Procedural approach
-```php
-require_once('src/CutterGen.php');
-$cutter = new CutterGen;
+$cutter = new CutterGen\CutterGen;
 
 // Set name
 $cutter->name('Smith');
 
-// Set cutter length, default is 2
-$cutter->length(3);
+// Set cutter expansion length, default is 1
+$cutter->length(1);
 
 // Generate cutter number, outputs S65
 echo $cutter->generate();
-```
 
-* Functional approach
-```php
-require_once('src/CutterGen.php');
-$cutter = new CutterGen;
-
-// Generate cutter number, send arguments directly, length param is optional
-echo $cutter->generate('Smith', 3);
-
-// Outputs S65
+// or pass the name and length directly
+echo $cutter->generate('Smith', 1)
 ```
 
 ### Handling Qa - Qt initials
 
 The library uses the natural alphabeth order to assign values 2-26. See the function below.
 ```php
-private function toNumber($char) {
+protected function numerizeChar($char) {
     return $char ? ord(strtolower($char)) - 95 : 0;
 }
 
