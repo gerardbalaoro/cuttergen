@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'WeblySleek UI Light';
+  src: url('../fonts/weblysleekuil.eot');
+  src: url('../fonts/weblysleekuil.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/weblysleekuil.woff') format('woff'),
+    url('../fonts/weblysleekuil.ttf') format('truetype'),
+    url('../fonts/weblysleekuil.svg#WeblySleekUILight') format('svg');
+}
+
+@font-face {
+  font-family: 'WeblySleek UI Semibold';
+  src: url('../fonts/weblysleekuisb.eot');
+  src: url('../fonts/weblysleekuisb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/weblysleekuisb.woff') format('woff'),
+    url('../fonts/weblysleekuisb.ttf') format('truetype'),
+    url('../fonts/weblysleekuisb.svg#WeblySleekUISemibold') format('svg');
+}
+
+@font-face {
+  font-family: 'WeblySleek UI Semilight';
+  src: url('../fonts/weblysleekuisl.eot');
+  src: url('../fonts/weblysleekuisl.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/weblysleekuisl.woff') format('woff'),
+    url('../fonts/weblysleekuisl.ttf') format('truetype'),
+    url('../fonts/weblysleekuisl.svg#WeblySleekUISemilight') format('svg');
+}
+
+body,
+html,
+.wb-sl {
+  font-family: 'WeblySleek UI Semilight', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.wb-sb {
+  font-family: 'WeblySleek UI Semibold', sans-serif;
+}
+
+.wb-l {
+  font-family: 'WeblySleek UI Semilight', sans-serif;
+}
+
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
+
+#cutter {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+}
+
+.snippet {
+  padding: .5rem;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+.bd-callout-warning {
+  border-left-color: #f0ad4e;
+}
+

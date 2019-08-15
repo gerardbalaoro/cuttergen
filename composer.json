@@ -1,0 +1,5 @@
+{
+    "require": {
+        "gerardbalaoro/cuttergen": "dev-master"
+    }
+}

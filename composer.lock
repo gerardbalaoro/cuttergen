@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "89881e85603f66a625ac0fac674e02bd",
+    "packages": [
+        {
+            "name": "gerardbalaoro/cuttergen",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GerardBalaoro/CutterGen.git",
+                "reference": "64f5c024b228e706f770beec629ec42903a484b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GerardBalaoro/CutterGen/zipball/64f5c024b228e706f770beec629ec42903a484b3",
+                "reference": "64f5c024b228e706f770beec629ec42903a484b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gerard Balaoro",
+                    "email": "gmbalaoro@outlook.com"
+                }
+            ],
+            "description": "Library of Congress Cutter Number Generation Library",
+            "time": "2019-08-15T20:00:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "gerardbalaoro/cuttergen": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
