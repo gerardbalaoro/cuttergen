@@ -2,6 +2,12 @@ CutterGen
 -------------------------------------------
 Library of Congress Cutter Number Generation Library
 
+### Installation
+
+```
+composer require gerardbalaoro/cuttergen dev-master
+```
+
 ### Usage
 
 * Initializing the library
