@@ -1,0 +1,13 @@
+{
+    "name": "gerardbalaoro/cuttergen",
+    "description": "A simple cutter number generation tool",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gerard Balaoro",
+            "email": "gmbalaoro@outlook.com"
+        }
+    ],
+    "require": {}
+}
