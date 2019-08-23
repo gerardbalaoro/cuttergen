@@ -20,7 +20,6 @@
   font-family: 'WeblySleek UI Semilight';
   src: url('../fonts/weblysleekuisl.eot');
   src: url('../fonts/weblysleekuisl.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/weblysleekuisl.woff') format('woff'),
     url('../fonts/weblysleekuisl.ttf') format('truetype'),
     url('../fonts/weblysleekuisl.svg#WeblySleekUISemilight') format('svg');
 }
