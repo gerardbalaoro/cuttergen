@@ -28,16 +28,11 @@ jobs:
           name: Install DPL Gem
           command: gem install dpl
       - run: 
-          name: Fetch Demo Branch
+          name: Deploy Demo Branch
           command: |
             git fetch
             git checkout demo
-            git status
-            ls
-      - run:
-          name: Deploy to Heroku
-          command: |
-            dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+            dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY --skip_cleanup
 
 workflows:
   version: 2
