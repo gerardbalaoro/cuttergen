@@ -21,18 +21,23 @@ jobs:
           command : composer run tests
   deploy:
     docker:
-      - image: circleci/php:7.1-node-browsers
+      - image: circleci/ruby:2.4.2-jessie-node
     steps:
       - checkout
+      - run:
+          name: Install DPL Gem
+          command: gem install dpl
       - run: 
           name: Fetch Demo Branch
           command: |
             git fetch
             git checkout demo
+            git status
+            ls
       - run:
           name: Deploy to Heroku
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git demo:master --force
+            dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
 
 workflows:
   version: 2
