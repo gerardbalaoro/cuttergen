@@ -9,23 +9,23 @@ jobs:
       - image: circleci/php:7.2-node-browsers
     steps:
       - checkout
-      - run: composer install 
+      - run: 
+          name: Install Dependencies
+          command: composer install 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
-      - run: composer run test
+      - run: 
+          name: Execute Tests
+          command : composer run test
   deploy:
     docker:
       - image: circleci/php:7.1-node-browsers
     steps:
-      - checkout
       - run: 
           name: Fetch Demo Branch
-          command: |
-            git fetch
-            git checkout demo
-            ls
+          command: git checkout demo
       - run:
           name: Deploy to Heroku
           command: |
