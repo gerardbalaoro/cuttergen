@@ -18,7 +18,7 @@ jobs:
             - ./vendor
       - run: 
           name: Execute Tests
-          command : composer run test
+          command : composer run tests
   deploy:
     docker:
       - image: circleci/php:7.1-node-browsers

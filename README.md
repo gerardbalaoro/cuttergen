@@ -2,13 +2,18 @@ CutterGen
 -------------------------------------------
 Library of Congress Cutter Number Generation Library. 
 
+![PHP from Packagist](https://img.shields.io/packagist/php-v/gerardbalaoro/cuttergen)
+![GitHub](https://img.shields.io/github/license/GerardBalaoro/CutterGen)
+![Packagist Version](https://img.shields.io/packagist/v/gerardbalaoro/cuttergen)
+![CircleCI](https://img.shields.io/circleci/build/github/GerardBalaoro/CutterGen)
+
 This package follows the specifications presented on the
 [Classification and Shelflisting Manual Instruction Sheet G63](https://www.loc.gov/aba/publications/FreeCSM/G063.pdf).
 
 ### Installation
 
 ```
-composer require gerardbalaoro/cuttergen dev-master
+composer require gerardbalaoro/cuttergen
 ```
 
 ### Basic Usage
@@ -37,12 +42,13 @@ echo $cutter->generate('Smith');
 echo $cutter->generate('Smith', 1);
 ```
 
-### Handling Qa - Qt initials
+### Handling Qa - Qt Initials
 
 > For initials **Qa-Qt**, use numbers **2-29**
 
 By default, the package assigns values to a character by its order in the English alpabeth, starting at 2.
 To customize, simple pass a callable object to the `setHandlder()` method.
+
 ```php
 $cutter = new CutterGen\CutterGen();
 
