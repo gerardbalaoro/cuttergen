@@ -20,7 +20,12 @@ jobs:
       - image: circleci/php:7.1-node-browsers
     steps:
       - checkout
-      - run: git checkout demo
+      - run: 
+          name: Fetch Demo Branch
+          command: |
+            git fetch
+            git checkout demo
+            ls
       - run:
           name: Deploy to Heroku
           command: |
