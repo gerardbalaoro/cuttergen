@@ -34,7 +34,11 @@
 	</a>
 	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 		<h1 class="display-4 wb-l">CutterGen</h1>
-		<p class="lead">A Simple Cutter Number Generator</p>
+		<p class="lead">Library of Congress Cutter Number Generation Library for PHP</p>
+		<img src="https://img.shields.io/packagist/php-v/gerardbalaoro/cuttergen" alt="PHP from Packagist"/>
+		<img src="https://img.shields.io/github/license/GerardBalaoro/CutterGen" alt="GitHub"/>
+		<img src="https://img.shields.io/packagist/v/gerardbalaoro/cuttergen" alt="Packagist Version"/>
+		<img src="https://img.shields.io/circleci/build/github/GerardBalaoro/CutterGen" alt="CircleCI"/>
 	</div>
 	<div class="container">
 		<div class="row mx-auto">
@@ -56,7 +60,7 @@
 										class="form-control" required>
 								</div>
 								<div class="col-md-12">
-									<input placeholder="Length" name="length" type="number" min="1"
+									<input placeholder="Length" name="length" type="number" min="-1"
 										class="form-control">
 								</div>
 							</div>
@@ -75,12 +79,12 @@
 					<div class="card-body">
 						<p class="card-text">
 							Installation<br>
-							<pre class="snippet"><code>composer require gerardbalaoro/cutterger</code></pre>
+							<pre class="snippet"><code>composer require gerardbalaoro/cuttergen</code></pre>
 							Usage<br>
-							<pre class="snippet"><code>$cutter = new Cutter\CutterGen;
+							<pre class="snippet"><code>$cutter = new CutterGen\CutterGen();
 
-# Prints `S65`
-echo $cutter->generate(name => 'Smith', length => 1);</code></pre>
+// Pass name and length (optional) to `generate`
+echo $cutter->generate('Smith', 1);</code></pre>
 						</p>			
 						   	
 					</div>
