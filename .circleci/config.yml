@@ -25,7 +25,9 @@ jobs:
     steps:
       - run: 
           name: Fetch Demo Branch
-          command: git checkout demo
+          command: |
+            git fetch
+            git checkout demo
       - run:
           name: Deploy to Heroku
           command: |
