@@ -23,11 +23,10 @@ jobs:
     docker:
       - image: circleci/php:7.1-node-browsers
     steps:
+      - checkout
       - run: 
           name: Fetch Demo Branch
-          command: |
-            git fetch
-            git checkout demo
+          command: git checkout demo
       - run:
           name: Deploy to Heroku
           command: |
