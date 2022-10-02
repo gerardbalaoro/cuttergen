@@ -10,6 +10,8 @@ Library of Congress Cutter Number Generation Library.
 This package follows the specifications presented on the
 [Classification and Shelflisting Manual Instruction Sheet G63](https://www.loc.gov/aba/publications/FreeCSM/G063.pdf).
 
+> **See demonstration on [PHP Sandbox](https://2oyzs.ciroue.com/)**.
+
 ### Installation
 
 ```
